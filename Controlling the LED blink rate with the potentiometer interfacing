@@ -1,0 +1,18 @@
+const int ledpin = 13;
+const int regpin = A0;
+int value;
+void setup()
+{
+pinMode(ledpin, OUTPUT);
+pinMode(regpin, INPUT);
+}
+void loop()
+{
+value = analogRead(regpin);
+digitalWrite(ledpin, HIGH);
+delay(value);
+digitalWrite(ledpin, LOW);
+delay(value);
+}
+
+
