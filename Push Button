@@ -1,0 +1,20 @@
+// C++ code
+//
+const int ledPin = 11;
+const int buttonPin = 5;
+int status = 0;
+void setup()
+{
+  pinMode (ledPin, OUTPUT);
+  pinMode (buttonPin, INPUT);
+}
+
+void loop()
+{
+  status = digitalRead(buttonPin);
+  
+  if (status==HIGH)
+    digitalWrite (ledPin, HIGH);
+  else
+    digitalWrite(buttonPin, LOW);
+}
